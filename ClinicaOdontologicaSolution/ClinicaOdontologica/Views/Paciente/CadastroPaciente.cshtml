@@ -1,0 +1,45 @@
+﻿@model ClinicaOdontologica.Models.Paciente
+
+@{
+    ViewData["Title"] = "Cadastro de Paciente";
+}
+
+<div class="text-center">
+    <h3 class="display-4">Cadastro de Paciente</h3>
+</div>
+
+@if (ViewData["exibirAlert"] != null && (bool)ViewData["exibirAlert"] == true)
+{
+    <div class="alert alert-success" role="alert">
+        Paciente cadastrado com sucesso
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadastroPaciente">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cpf" class="control-label"></label>
+                <input asp-for="cpf" class="form-control" />
+                <span asp-validation-for="cpf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="CadastroPaciente" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
