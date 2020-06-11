@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Details"
+             x:Class="FundsWallet.Views.DetalhesDeFundo">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <StackLayout Orientation="Vertical" Margin="0,0,0,15" HorizontalOptions="Center">
+                <Label HorizontalOptions="Center" x:Name="FundoNome" TextColor="CadetBlue" FontSize="20" />
+                <Label HorizontalOptions="Center" x:Name="FundoTotal" TextColor="CadetBlue" FontSize="15" />
+            </StackLayout>
+
+            <BoxView Color="LightGray" VerticalOptions="FillAndExpand" HeightRequest="2"></BoxView>
+
+            <StackLayout>
+                <ListView x:Name="FundosView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="CadetBlue" Grid.Column="0" Text="{Binding PurchaseDate}" />
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="CadetBlue" Grid.Column="1" Text="{Binding Qty}" />
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="CadetBlue" Grid.Column="2" Text="{Binding Value}" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

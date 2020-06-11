@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FundsWallet",
+    "\\FundsWallet\\FundsWallet",
+    "\\FundsWallet\\FundsWallet.Android",
+    "\\FundsWallet\\FundsWallet.Android\\Assets",
+    "\\FundsWallet\\FundsWallet.Android\\bin",
+    "\\FundsWallet\\FundsWallet.Android\\bin\\Debug",
+    "\\FundsWallet\\FundsWallet.Android\\obj",
+    "\\FundsWallet\\FundsWallet.Android\\Properties",
+    "\\FundsWallet\\FundsWallet.iOS",
+    "\\FundsWallet\\FundsWallet\\obj",
+    "\\FundsWallet\\FundsWallet\\obj\\Release"
+  ],
+  "SelectedNode": "\\FundsWallet.sln",
+  "PreviewInSolutionExplorer": false
+}
